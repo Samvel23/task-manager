@@ -1,0 +1,57 @@
+.errorContainer {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 28px;
+  background: var(--background);
+  color: var(--foreground);
+  text-align: center;
+}
+
+.errorIcon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--danger-soft);
+  border-radius: 16px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 24px;
+}
+
+.title {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.message {
+  max-width: 420px;
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.retryButton {
+  min-height: 40px;
+  margin-top: 6px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--background);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition);
+
+  &:hover {
+    background: var(--primary-hover);
+  }
+}

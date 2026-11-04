@@ -1,0 +1,7 @@
+.taskPage {
+  color-scheme: dark;
+}
+
+[data-theme="light"] .taskPage {
+  color-scheme: light;
+}

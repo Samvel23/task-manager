@@ -1,0 +1,143 @@
+.taskItemCard {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 48px;
+  padding: 9px 12px;
+  border: 1px solid var(--card-border);
+  border-radius: 11px;
+  background: var(--card-bg);
+  transition:
+    border-color var(--transition),
+    background-color var(--transition),
+    opacity var(--transition);
+
+  &:hover {
+    border-color: var(--primary-border);
+    background: var(--card-raised);
+  }
+
+  &.pending {
+    opacity: 0.68;
+  }
+}
+
+.taskItemLeft {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkboxWrapper {
+  position: relative;
+  display: grid;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  place-items: center;
+}
+
+.taskCheckbox {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.itemSpinner {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--primary);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 650ms linear infinite;
+}
+
+.taskTitle {
+  overflow: hidden;
+  color: var(--foreground);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 550;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.taskCompleted {
+  color: var(--muted-text);
+  text-decoration: line-through;
+}
+
+.taskItemActions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.taskUserBadge {
+  max-width: 120px;
+  overflow: hidden;
+  padding: 4px 8px;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--muted-bg);
+  color: var(--muted-text);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.editDetails {
+  position: relative;
+}
+
+.editSummary {
+  min-width: 42px;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted-text);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--muted-bg);
+    color: var(--foreground);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .taskItemCard {
+    min-height: 50px;
+    padding: 9px 10px;
+  }
+
+  .taskItemActions {
+    gap: 4px;
+  }
+
+  .taskUserBadge {
+    display: none;
+  }
+}

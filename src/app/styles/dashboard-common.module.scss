@@ -1,0 +1,49 @@
+.mainContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 28px 40px 32px;
+}
+
+.eyebrow {
+  margin: 0 0 7px;
+  color: var(--muted-text);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+.workspaceError {
+  margin: 0;
+  padding: 11px 13px;
+  border: 1px solid var(--danger-soft);
+  border-radius: 10px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.loadingText {
+  margin: 0;
+  padding: 36px 20px;
+  color: var(--muted-text);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 1040px) {
+  .mainContainer {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainContainer {
+    padding: 20px 16px 28px;
+  }
+}

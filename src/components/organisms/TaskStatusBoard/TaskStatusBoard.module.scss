@@ -1,0 +1,53 @@
+.taskTabs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  background: var(--card-bg);
+
+  button {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--muted-text);
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+
+    span {
+      display: inline-grid;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--muted-bg);
+      color: var(--muted-text);
+      font-size: 10px;
+    }
+
+    &:hover {
+      color: var(--foreground);
+    }
+  }
+}
+
+.activeTaskTab {
+  border-color: var(--card-border) !important;
+  background: var(--card-raised) !important;
+  color: var(--foreground) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  span {
+    background: var(--primary-soft) !important;
+    color: var(--primary) !important;
+  }
+}

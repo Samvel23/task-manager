@@ -1,0 +1,72 @@
+.submitButton {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: var(--primary);
+  color: var(--background);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    opacity var(--transition);
+
+  &:hover:not(:disabled) {
+    background: var(--primary-hover);
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+.danger {
+  border-color: var(--danger-soft);
+  background: var(--danger-soft);
+  color: var(--danger);
+
+  &:hover:not(:disabled) {
+    border-color: var(--danger);
+    background: var(--danger);
+    color: var(--background);
+  }
+}
+
+.quiet {
+  border-color: var(--card-border);
+  background: var(--card-bg);
+  color: var(--foreground);
+
+  &:hover:not(:disabled) {
+    border-color: var(--primary-border);
+    background: var(--muted-bg);
+  }
+}
+
+.submitSpinner {
+  width: 15px;
+  height: 15px;
+  animation: spin 800ms linear infinite;
+}
+
+.spinnerTrack {
+  opacity: 0.25;
+}
+
+.spinnerPath {
+  opacity: 0.8;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

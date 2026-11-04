@@ -1,0 +1,66 @@
+.confirmation {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  padding: 3px 4px;
+  color: var(--foreground);
+}
+
+.title {
+  margin: 0 0 5px;
+  color: var(--foreground);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 12px;
+  line-height: 1.5;
+
+  strong {
+    color: var(--foreground);
+    font-weight: 650;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+
+  form {
+    display: flex;
+    flex-shrink: 0;
+  }
+}
+
+.cancelButton {
+  width: 120px;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--card-raised);
+  color: var(--foreground);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    background-color var(--transition);
+
+  &:hover {
+    border-color: var(--primary-border);
+    background: var(--muted-bg);
+  }
+}
+
+.actions :global(button[type="submit"]) {
+  width: 120px;
+  min-height: 42px;
+  justify-content: center;
+}

@@ -1,0 +1,21 @@
+.fallback {
+  padding: 18px;
+  border: 1px solid var(--danger-soft);
+  border-radius: 12px;
+  background: var(--danger-soft);
+  color: var(--foreground);
+}
+
+.title {
+  margin: 0 0 7px;
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.message {
+  margin: 0;
+  color: var(--muted-text);
+  font-size: 12px;
+  line-height: 1.5;
+}

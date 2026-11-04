@@ -1,0 +1,40 @@
+.breadcrumb {
+  width: 100%;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item,
+.current {
+  color: var(--muted-text);
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.link {
+  color: var(--muted-text);
+  text-decoration: none;
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.separator {
+  color: var(--card-border);
+  font-size: 12px;
+}
+
+.current {
+  color: var(--foreground);
+  font-weight: 650;
+}

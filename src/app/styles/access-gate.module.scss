@@ -1,0 +1,73 @@
+.loginGate {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  overflow: auto;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 50% 0, var(--accent-soft), transparent 520px),
+    var(--background);
+}
+
+.loginCard {
+  display: flex;
+  width: 100%;
+  max-width: 440px;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 36px;
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+}
+
+.loginMark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+  place-items: center;
+  border: 1px solid var(--primary-border);
+  border-radius: 15px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.loginTitle {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 24px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+  line-height: 1.25;
+}
+
+.loginDescription {
+  max-width: 330px;
+  margin: 0 0 8px;
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.loginEyebrow {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .loginCard {
+    gap: 12px;
+    padding: 28px 20px;
+  }
+
+  .loginTitle {
+    font-size: 21px;
+  }
+}

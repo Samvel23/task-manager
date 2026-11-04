@@ -1,0 +1,125 @@
+.taskListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.taskListTitle {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.taskCount {
+  color: var(--muted-text);
+  font-size: 11px;
+}
+
+.taskListError {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--danger-soft);
+  border-radius: 10px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.taskItemsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emptyState {
+  margin: 0;
+  padding: 18px;
+  border: 1px dashed var(--card-border);
+  border-radius: 12px;
+  color: var(--muted-text);
+  font-size: 12px;
+  text-align: center;
+}
+
+.taskItemWrapper {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+
+  > :first-child {
+    flex: 1;
+  }
+}
+
+.deleteForm {
+  flex-shrink: 0;
+}
+
+.deleteTrigger {
+  min-width: 68px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--danger-soft);
+  border-radius: 8px;
+  background: var(--danger-soft);
+  color: var(--danger);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    background-color var(--transition),
+    color var(--transition);
+
+  &:hover:not(:disabled) {
+    border-color: var(--danger);
+    background: var(--danger);
+    color: var(--background);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--danger);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+}
+
+.loadMoreButton {
+  min-height: 38px;
+  align-self: center;
+  padding: 0 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: var(--card-bg);
+  color: var(--foreground);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    background-color var(--transition);
+
+  &:hover:not(:disabled) {
+    border-color: var(--primary-border);
+    background: var(--muted-bg);
+  }
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: wait;
+  }
+}

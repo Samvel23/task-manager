@@ -1,0 +1,121 @@
+.editDialog {
+  width: 460px;
+  max-width: calc(100% - 32px);
+  max-height: calc(100% - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--primary-border);
+  border-radius: 18px;
+  background: var(--card-bg);
+  color: var(--foreground);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+
+  &::backdrop {
+    background: rgba(3, 7, 14, 0.62);
+    animation: backdrop-in 180ms ease both;
+  }
+
+  &[open] {
+    animation: dialog-in 180ms ease both;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+  }
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 26px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.editHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.editTitle {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.closeButton {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: var(--card-raised);
+  color: var(--muted-text);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--primary-border);
+    color: var(--foreground);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+}
+
+.closeIcon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  overflow: visible;
+
+  path {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-width: 1.8px;
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .editForm {
+    gap: 18px;
+    padding: 20px;
+  }
+}

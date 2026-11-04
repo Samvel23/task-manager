@@ -1,0 +1,98 @@
+.projectsPage {
+  min-height: 100%;
+  padding: 48px 24px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.projectsContainer {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.projectsTitle {
+  margin: 0 0 8px;
+  color: var(--foreground);
+  font-size: 38px;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.projectsSubtitle {
+  margin: 0 0 30px;
+  color: var(--muted-text);
+  font-size: 15px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.projectCard {
+  display: block;
+  padding: 22px;
+  border: 1px solid var(--card-border);
+  border-radius: 15px;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color var(--transition),
+    transform var(--transition);
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-border);
+  }
+
+  &:hover .projectCardName {
+    color: var(--primary);
+  }
+}
+
+.projectCardName {
+  margin: 0 0 8px;
+  color: var(--foreground);
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.projectCardUsername,
+.projectCardEmail {
+  margin: 0 0 8px;
+  color: var(--muted-text);
+  font-size: 13px;
+}
+
+.projectCardEmail {
+  margin-bottom: 14px;
+  font-size: 12px;
+}
+
+.projectCardView {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--muted-bg);
+  color: var(--muted-text);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.projectCard:hover .projectCardView {
+  border-color: var(--primary-border);
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.emptyProjects {
+  padding: 40px 20px;
+  color: var(--muted-text);
+  text-align: center;
+}

@@ -1,0 +1,186 @@
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #0b0e13;
+  --foreground: #e8edf5;
+  --card-bg: #121720;
+  --card-raised: #171f2b;
+  --card-border: #252e3c;
+  --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+  --input-bg: #0e141d;
+  --input-border: #303b4c;
+  --input-focus-border: #89a5ff;
+  --input-focus-shadow: 0 0 0 3px rgba(119, 151, 255, 0.18);
+  --muted-text: #98a4b7;
+  --muted-bg: #19212d;
+  --primary: #9ab0ff;
+  --primary-hover: #b6c5ff;
+  --primary-active: #718ef3;
+  --primary-soft: rgba(119, 151, 255, 0.12);
+  --primary-border: rgba(119, 151, 255, 0.3);
+  --accent-soft: rgba(112, 145, 255, 0.12);
+  --danger: #ff8585;
+  --danger-hover: #ff6868;
+  --danger-soft: rgba(255, 113, 113, 0.1);
+  --success: #67d8a1;
+  --success-soft: rgba(103, 216, 161, 0.1);
+  --success-border: rgba(103, 216, 161, 0.28);
+  --border-radius: 12px;
+  --transition: 180ms ease;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #f5f7fb;
+  --foreground: #1d2736;
+  --card-bg: #ffffff;
+  --card-raised: #f8faff;
+  --card-border: #e2e8f1;
+  --card-shadow: 0 16px 40px rgba(35, 51, 79, 0.07);
+  --input-bg: #ffffff;
+  --input-border: #d3dce9;
+  --input-focus-border: #526fe0;
+  --input-focus-shadow: 0 0 0 3px rgba(82, 111, 224, 0.14);
+  --muted-text: #69778c;
+  --muted-bg: #f0f3f8;
+  --primary: #526fe0;
+  --primary-hover: #405ecb;
+  --primary-active: #344faf;
+  --primary-soft: rgba(82, 111, 224, 0.09);
+  --primary-border: rgba(82, 111, 224, 0.24);
+  --accent-soft: rgba(82, 111, 224, 0.08);
+  --danger: #c83e49;
+  --danger-hover: #af2f3b;
+  --danger-soft: rgba(200, 62, 73, 0.08);
+  --success: #188a5b;
+  --success-soft: rgba(24, 138, 91, 0.08);
+  --success-border: rgba(24, 138, 91, 0.22);
+}
+
+.Toastify__toast-container {
+  z-index: 1200;
+  width: 380px;
+  max-width: calc(100% - 32px);
+}
+
+.Toastify__toast {
+  min-height: 58px;
+  margin-bottom: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 13px;
+  background: var(--card-bg);
+  color: var(--foreground);
+  box-shadow: var(--card-shadow);
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.Toastify__toast-theme--light,
+.Toastify__toast-theme--dark {
+  background: var(--card-bg);
+  color: var(--foreground);
+}
+
+.Toastify__toast-icon {
+  flex-shrink: 0;
+}
+
+.Toastify__close-button {
+  color: var(--muted-text);
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+@media (max-width: 480px) {
+  .Toastify__toast-container,
+  .Toastify__toast-container[data-stacked="true"] {
+    width: calc(100% - 32px);
+  }
+
+  .Toastify__toast-container--top-right {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .Toastify__toast {
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 12px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 18% 0, var(--accent-soft), transparent 520px),
+    var(--background);
+  color: var(--foreground);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+html:has(dialog[open]),
+body:has(dialog[open]) {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--primary-soft);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
